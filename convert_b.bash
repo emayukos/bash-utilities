@@ -3,23 +3,20 @@
 # Structure:
 # $1 should be a flag with two letters, 
 # the first being the base of the number being converted (-d, -h, -b, -o)
-# the second is the base of the number to convert to (d, h, b, o)
+# the second is the base of the number to convert to 
 # $2 is the number to convert 
 
-# Example: ./base_convert -db 3   will convert decimal number 3 to binary (outputs 11).
+# Example: ./base_convert -db 3   will convert the decimal (-d for DECIMAL) number 3 to binary (-b for BINARY). It should result in 11
 
 # Error checking
-if [ $# = 0 ]; then 
-	echo "You didn't specify any arguments."; 
-	exit 1; 
-fi
+if [ $# = 0 ]; then echo "You didn't specify any arguments."; exit; fi
 
 flags=$1
 number=$2 # number to convert
 
 if ! [[ $number =~ ^[0-9A-F]+$ ]]; then # must be an integer
-	echo "second argument must be an integer"
-	exit 1  # terminate script
+		echo "second argument must be an integer"
+		exit 1  # terminate script
 fi
 
 
