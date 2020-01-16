@@ -1,3 +1,3 @@
 # bash-utilities
 
-Have most of these scripts encapsulated into functions in my .bashrc.
+Have these scripts encapsulated into functions in my .bashrc.
