@@ -21,10 +21,6 @@ fi
 
 
 case $flags in
-	# don't need to give both ibase and obase for any conversion 
-	# involving decimal numbers, since these settings default to 10.
-	# give obase when converting from decimal
-	# give ibase when converting to decimal
 	# dec to binary
 	-db)
 		echo "obase=2; $number" | bc
